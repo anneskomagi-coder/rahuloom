@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Ann</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="label" data-content="kontakt.page_label">…</span>
+      <h1 data-content="kontakt.page_h1">…</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container kontakt-grid">
+
+      <div class="kontakt-form-wrap">
+        <h2 data-content="kontakt.form_h2">…</h2>
+        <p data-content="kontakt.form_text">…</p>
+        <form class="kontakt-form" id="kontakt-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nimi">Nimi *</label>
+              <input type="text" id="nimi" name="nimi" placeholder="Sinu nimi" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-post *</label>
+              <input type="email" id="email" name="email" placeholder="sinu@email.ee" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+372 5xxx xxxx">
+          </div>
+          <div class="form-group">
+            <label for="teema">Teema</label>
+            <select id="teema" name="teema">
+              <option value="">Vali teema</option>
+              <option value="massaaž">Massaaž</option>
+              <option value="noustamine">Nõustamine</option>
+              <option value="loogastus">Lõõgastus</option>
+              <option value="kinkekaard">Kinkekaard</option>
+              <option value="muu">Muu</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sonum">Sõnum *</label>
+            <textarea id="sonum" name="sonum" rows="5" placeholder="Kirjuta oma küsimusest või soovist..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" data-content="kontakt.form_btn">…</button>
+          <div class="form-success" id="form-success" style="display:none;">
+            <p data-content="kontakt.form_success">…</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="kontakt-info">
+        <h2 data-content="kontakt.info_h2">…</h2>
+
+        <div class="info-block">
+          <div class="info-icon">&#9993;</div>
+          <div>
+            <h4 data-content="kontakt.info_email_label">…</h4>
+            <a id="info-email" href="mailto:ann@example.ee" data-content="kontakt.info_email">…</a>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">&#9742;</div>
+          <div>
+            <h4 data-content="kontakt.info_phone_label">…</h4>
+            <a id="info-phone" href="tel:+3725001234" data-content="kontakt.info_phone">…</a>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">&#9679;</div>
+          <div>
+            <h4 data-content="kontakt.info_location_label">…</h4>
+            <p>
+              <span data-content="kontakt.info_location">…</span><br>
+              <small data-content="kontakt.info_location_note">…</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">&#9998;</div>
+          <div>
+            <h4 data-content="kontakt.info_hours_label">…</h4>
+            <p data-content-html="kontakt.info_hours">…<br>Laupäev: 10:00–15:00<br>Pühapäev: Suletud</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h4 data-content="kontakt.info_social_label">…</h4>
+          <div class="social-row">
+            <a href="#" class="social-link" data-href-content="kontakt.info_instagram_url" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              Instagram
+            </a>
+            <a href="#" class="social-link" data-href-content="kontakt.info_facebook_url" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    document.getElementById('kontakt-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      this.reset();
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="includes.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
