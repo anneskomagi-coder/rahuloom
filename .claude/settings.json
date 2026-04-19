@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dewellness.ee)",
+      "WebFetch(domain:loomalikult.ee)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)"
+    ]
+  }
+}

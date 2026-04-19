@@ -1,0 +1,115 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.formWrap h2 { margin-bottom: 0.75rem; }
+.formWrap > p { margin-bottom: 2rem; }
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.formGroup { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: 0.03em;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color var(--transition);
+  appearance: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: var(--sage);
+}
+
+.formGroup textarea { resize: vertical; min-height: 130px; }
+
+.success {
+  background: var(--cream);
+  border: 1px solid var(--sage-light);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  color: var(--sage-dark);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Contact info */
+.infoSide h2 { margin-bottom: 2rem; }
+
+.infoBlock {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.infoIcon {
+  font-size: 1.3rem;
+  color: var(--sage);
+  min-width: 28px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.infoBlock h4 {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sage-dark);
+}
+.infoBlock p,
+.infoBlock a { font-size: 0.95rem; color: var(--mid); line-height: 1.6; margin: 0; }
+.infoBlock a:hover { color: var(--sage-dark); }
+
+.socialLinks { padding-top: 1.5rem; }
+.socialLinks h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sage-dark);
+  margin-bottom: 1rem;
+}
+
+.socialRow { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--mid);
+  transition: color var(--transition);
+}
+.socialLink:hover { color: var(--sage-dark); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .formRow { grid-template-columns: 1fr; }
+}
