@@ -10,6 +10,7 @@ const Minust = lazy(() => import('./pages/Minust/Minust'))
 const Teenused = lazy(() => import('./pages/Teenused/Teenused'))
 const Kontakt = lazy(() => import('./pages/Kontakt/Kontakt'))
 const KKK = lazy(() => import('./pages/KKK/KKK'))
+const Proov2 = lazy(() => import('./pages/Proov2/Proov2'))
 
 const isLocalhost = typeof window !== 'undefined' &&
   /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
@@ -36,6 +37,7 @@ function AppShell() {
             <Route path="/teenused" element={<Teenused />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/kkk" element={<KKK />} />
+            <Route path="/proov-2" element={<Proov2 />} />
           </Routes>
         </Suspense>
       </main>
