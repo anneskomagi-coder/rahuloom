@@ -4,6 +4,7 @@ import { ContentProvider, useContentContext } from './context/ContentContext'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Editor from './components/Editor/Editor'
+import ComingSoon from './pages/ComingSoon/ComingSoon'
 
 const Avaleht = lazy(() => import('./pages/Avaleht/Avaleht'))
 const Minust = lazy(() => import('./pages/Minust/Minust'))
@@ -17,6 +18,10 @@ const isLocalhost = typeof window !== 'undefined' &&
 
 function AppShell() {
   const { content } = useContentContext()
+
+  if (typeof window !== 'undefined' && window.location.pathname === '/') {
+    return <ComingSoon />
+  }
 
   if (!content) {
     return (

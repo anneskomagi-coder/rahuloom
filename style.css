@@ -472,6 +472,11 @@ em { font-style: italic; color: var(--sage-dark); }
   gap: 5rem;
 }
 
+.massaaz-price-card {
+  max-width: 480px;
+  margin: -3.5rem auto -3.5rem;
+}
+
 .service-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -508,9 +513,11 @@ em { font-style: italic; color: var(--sage-dark); }
 /* PRICING */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   align-items: start;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .price-card {
