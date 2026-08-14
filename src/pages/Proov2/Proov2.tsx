@@ -1,10 +1,10 @@
 import styles from './Proov2.module.css'
 
 const emblem = '/rahuloom-emblem.png'
-const darkCard = '/rahuloom-dark-card.png'
-const cardMock = '/rahuloom-cardmock.png'
-const embroidery = '/rahuloom-embroidery.png'
-const decal = '/rahuloom-decal.png'
+const hobuneLoust = '/hobune_loust.jpg.webp'
+const hobunePikali = '/hobune_pikali.jpeg'
+const hobuneVees = '/hobune_vees.jpeg'
+const hobuneValge = '/hobune_valge.png.webp'
 
 const values = [
   { icon: 'connection', h3: 'ÜHENDUS', text: 'Usaldus, lähedus ja koos liikumine.' },
@@ -15,19 +15,11 @@ const values = [
 ]
 
 const strip = [
-  { icon: 'hand', label: 'PUUDUTUS', text: 'Õrn ja teadlik lähenemine.' },
-  { icon: 'sun', label: 'INFRAPUNA', text: 'Soojuse jõud keha taastumiseks.' },
-  { icon: 'leaf', label: 'LOODUS', text: 'Looduslikud meetodid ja keskkond.' },
-  { icon: 'horse', label: 'PROFESSIONAALSUS', text: 'Aastane kogemus ja teadmised.' },
-  { icon: 'heart', label: 'HOOLIVUS', text: 'Iga loom on tähtis. Iga puudutus loeb.' },
-]
-
-const palette = [
-  { hex: '#1F3A2D' },
-  { hex: '#4C6B4F' },
-  { hex: '#A8A186' },
-  { hex: '#E9E0CF' },
-  { hex: '#C89D5A' },
+  { icon: 'phone', label: '+372 5804 5288', text: '' },
+  { icon: 'globe', label: 'www.rahuloom.com', text: '' },
+  { icon: 'mail', label: 'ann.rahuloom@gmail.com', text: '' },
+  { icon: 'pin', label: 'Kokkuleppel üle Eesti', text: '' },
+  { icon: 'heart', label: 'Hobused ruulivad', text: '' },
 ]
 
 function Icon({ name }: { name: string }) {
@@ -88,6 +80,43 @@ function Icon({ name }: { name: string }) {
           <circle cx="14.6" cy="7.4" r=".4" fill="currentColor" />
         </svg>
       )
+    case 'phone':
+      return (
+        <svg {...common} strokeWidth={1.4}>
+          <path d="M7 3.5c.6 0 1.1.4 1.3.9l1 2.4c.2.5 0 1-.3 1.4L7.8 9.6c-.3.3-.3.7-.1 1a11 11 0 0 0 5.7 5.7c.3.2.7.2 1-.1l1.4-1.2c.4-.3.9-.5 1.4-.3l2.4 1c.5.2.9.7.9 1.3v2c0 1-.9 1.8-1.9 1.6C11.9 19.4 4.6 12.1 3.4 5.4 3.2 4.4 4 3.5 5 3.5Z" />
+        </svg>
+      )
+    case 'globe':
+      return (
+        <svg {...common} strokeWidth={1.4}>
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M3.5 12h17M12 3.5c2.3 2.3 3.5 5.2 3.5 8.5s-1.2 6.2-3.5 8.5c-2.3-2.3-3.5-5.2-3.5-8.5S9.7 5.8 12 3.5Z" />
+        </svg>
+      )
+    case 'mail':
+      return (
+        <svg {...common} strokeWidth={1.4}>
+          <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" />
+          <path d="m4.5 7 6.6 5a1.5 1.5 0 0 0 1.8 0l6.6-5" />
+        </svg>
+      )
+    case 'pin':
+      return (
+        <svg {...common} strokeWidth={1.4}>
+          <path d="M12 21.5S5 15 5 9.8a7 7 0 0 1 14 0c0 5.2-7 11.7-7 11.7Z" />
+          <circle cx="12" cy="9.5" r="2.4" />
+        </svg>
+      )
+    case 'paw':
+      return (
+        <svg {...common} viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <ellipse cx="12" cy="15.5" rx="5.6" ry="4.6" />
+          <ellipse cx="5.2" cy="10.4" rx="2.1" ry="2.7" transform="rotate(-18 5.2 10.4)" />
+          <ellipse cx="9.6" cy="6.3" rx="2" ry="2.7" transform="rotate(-8 9.6 6.3)" />
+          <ellipse cx="14.4" cy="6.3" rx="2" ry="2.7" transform="rotate(8 14.4 6.3)" />
+          <ellipse cx="18.8" cy="10.4" rx="2.1" ry="2.7" transform="rotate(18 18.8 10.4)" />
+        </svg>
+      )
     default:
       return null
   }
@@ -120,25 +149,16 @@ export default function Proov2() {
 
       <section className={styles.showcase}>
         <div className={styles.showcaseGrid}>
-          <img src={darkCard} alt="Rahuloom logo tumerohelisel taustal" className={styles.tileWide} />
-          <img src={cardMock} alt="Rahuloom visiitkaardi mockup" className={styles.tileWide} />
+          <img src={hobuneLoust} alt="Hobune heinamaal" className={styles.tileWide} />
+          <img src={hobuneVees} alt="Hobune ja inimene meres" className={styles.tileWide} />
           <div className={styles.tileStack}>
-            <img src={embroidery} alt="Rahuloom logo tikandina" className={styles.tileHalf} />
-            <img src={decal} alt="Rahuloom logo autokleebisena" className={styles.tileHalf} />
+            <img src={hobuneValge} alt="Õrn puudutus hobuse laubal" className={styles.tileHalf} />
+            <img src={hobunePikali} alt="Hobune lamamas liival" className={styles.tileHalf} />
           </div>
         </div>
       </section>
 
       <section className={styles.paletteSection}>
-        <div className={styles.swatches}>
-          {palette.map((p) => (
-            <div key={p.hex} className={styles.swatch}>
-              <span className={styles.swatchColor} style={{ background: p.hex }} />
-              <span className={styles.swatchHex}>{p.hex}</span>
-            </div>
-          ))}
-        </div>
-
         <ul className={styles.strip}>
           {strip.map((s) => (
             <li key={s.label} className={styles.stripItem}>

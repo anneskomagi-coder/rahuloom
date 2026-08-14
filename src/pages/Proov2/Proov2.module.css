@@ -131,37 +131,6 @@
   padding: 0 1.5rem 4rem;
 }
 
-.swatches {
-  max-width: 1180px;
-  margin: 0 auto 3rem;
-  display: flex;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  padding-top: 2rem;
-  border-top: 1px solid rgba(168, 161, 134, 0.35);
-}
-
-.swatch {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.swatchColor {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.swatchHex {
-  font-family: var(--body);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-  color: #6b6656;
-}
-
 .strip {
   list-style: none;
   margin: 0;
