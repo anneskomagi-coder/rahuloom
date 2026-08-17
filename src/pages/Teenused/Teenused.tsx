@@ -2,24 +2,24 @@ import t from '../../content/teenused.json'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Teenused.module.css'
 const hobuneVees = '/hobune_vees.jpeg'
-const hobuneLoust = '/hobune_loust.jpg.webp'
-const hobunePikali = '/hobune_pikali.jpeg'
+const hobuneLoust = '/hobune_pikali.jpeg'
+const hobunePikali = '/revitavet.jpeg'
 
 export default function Teenused() {
 
   const services = [
     {
-      img: hobuneVees, alt: 'Hobune vees', reverse: false,
+      img: hobuneVees, alt: 'Massaaz. Hobune vees', reverse: false,
       label: t.s1_label, h3: t.s1_h3, text: t.s1_text,
       items: [t.s1_li1, t.s1_li2, t.s1_li3, t.s1_li4],
     },
     {
-      img: hobuneLoust, alt: 'Hobune looduslikus keskkonnas', reverse: true,
+      img: hobuneLoust, alt: 'Püsikliendile. Hobuse kallistus', reverse: true,
       label: t.s2_label, h3: t.s2_h3, text: t.s2_text,
       items: [t.s2_li1, t.s2_li2, t.s2_li3, t.s2_li4],
     },
     {
-      img: hobunePikali, alt: 'Hobune pikali puhkamas', reverse: false,
+      img: hobunePikali, alt: 'Revitavet. Infrapuna', reverse: false,
       label: t.s3_label, h3: t.s3_h3, text: t.s3_text,
       items: [t.s3_li1, t.s3_li2, t.s3_li3, t.s3_li4],
     },

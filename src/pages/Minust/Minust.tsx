@@ -1,7 +1,7 @@
 import m from '../../content/minust.json'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Minust.module.css'
-const hobune = '/hobune_pikali.jpeg'
+const hobune = '/hobune-masinaga.jpg'
 
 export default function Minust() {
 
