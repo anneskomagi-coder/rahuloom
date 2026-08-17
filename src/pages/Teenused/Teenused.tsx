@@ -1,5 +1,4 @@
 import t from '../../content/teenused.json'
-import PageHero from '../../components/PageHero/PageHero'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Teenused.module.css'
 const hobuneVees = '/hobune_vees.jpeg'

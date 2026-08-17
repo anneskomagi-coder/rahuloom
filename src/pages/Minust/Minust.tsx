@@ -1,5 +1,4 @@
 import m from '../../content/minust.json'
-import PageHero from '../../components/PageHero/PageHero'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Minust.module.css'
 const hobune = '/hobune_pikali.jpeg'
@@ -22,7 +21,6 @@ export default function Minust() {
 
   return (
     <>
-      <PageHero label={m.page_label} title={m.page_h1} />
 
       <section className="section">
         <div className={`container ${styles.aboutGrid}`}>
