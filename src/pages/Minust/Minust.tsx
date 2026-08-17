@@ -1,12 +1,10 @@
-import { useContent } from '../../context/ContentContext'
+import m from '../../content/minust.json'
 import PageHero from '../../components/PageHero/PageHero'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Minust.module.css'
 const hobune = '/hobune_pikali.jpeg'
 
 export default function Minust() {
-  const c = useContent()
-  const m = c.minust
 
   const values = [
     { icon: '♡', h3: m.value1_h3, text: m.value1_text },

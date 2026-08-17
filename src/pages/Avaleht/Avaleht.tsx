@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useContent } from '../../context/ContentContext'
+import a from '../../content/avaleht.json'
 import Button from '../../components/Button/Button'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Avaleht.module.css'
 const hobune = '/hobune_vees.jpeg'
 
 export default function Avaleht() {
-  const c = useContent()
-  const a = c.avaleht
 
   return (
     <>

@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useContent } from '../../context/ContentContext'
+import c from '../../content/shared.json'
 import styles from './Header.module.css'
 const logo = '/rahuloom-logo-2.webp'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  const c = useContent()
 
   function closeNav() { setOpen(false) }
 

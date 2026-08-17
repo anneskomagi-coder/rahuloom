@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom'
-import { useContent } from '../../context/ContentContext'
+import c from '../../content/shared.json'
 import styles from './Footer.module.css'
 const logo = '/loplik-logo-rahuloom.webp'
 
 export default function Footer() {
-  const c = useContent()
-
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>

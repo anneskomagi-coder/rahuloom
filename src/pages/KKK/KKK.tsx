@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useContent } from '../../context/ContentContext'
+import k from '../../content/kkk.json'
 import PageHero from '../../components/PageHero/PageHero'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './KKK.module.css'
@@ -44,9 +44,6 @@ function FaqAccordion({ group }: { group: FaqGroup }) {
 }
 
 export default function KKK() {
-  const c = useContent()
-  const k = c.kkk
-
   const groups: FaqGroup[] = [
     {
       title: k.g1_title,

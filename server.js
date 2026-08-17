@@ -24,26 +24,6 @@ const MIME = {
 };
 
 http.createServer((req, res) => {
-  // Save content.json (editor support on localhost)
-  if (req.method === 'POST' && req.url === '/save-content') {
-    let body = '';
-    req.on('data', chunk => body += chunk);
-    req.on('end', () => {
-      try {
-        JSON.parse(body);
-        // Write to both root (source of truth) and dist (served at runtime)
-        fs.writeFileSync(path.join(__dirname, 'content.json'), body, 'utf8');
-        fs.writeFileSync(path.join(DIST, 'content.json'), body, 'utf8');
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ ok: true }));
-      } catch (e) {
-        res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ ok: false, error: e.message }));
-      }
-    });
-    return;
-  }
-
   // Strip query strings
   const urlPath = req.url.split('?')[0];
   let filePath = path.join(DIST, urlPath === '/' ? 'index.html' : urlPath);

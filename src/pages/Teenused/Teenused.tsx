@@ -1,4 +1,4 @@
-import { useContent } from '../../context/ContentContext'
+import t from '../../content/teenused.json'
 import PageHero from '../../components/PageHero/PageHero'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Teenused.module.css'
@@ -7,8 +7,6 @@ const hobuneLoust = '/hobune_loust.jpg.webp'
 const hobunePikali = '/hobune_pikali.jpeg'
 
 export default function Teenused() {
-  const c = useContent()
-  const t = c.teenused
 
   const services = [
     {
@@ -56,12 +54,9 @@ export default function Teenused() {
 
   return (
     <>
-      <PageHero label={t.page_label} title={t.page_h1} />
-
       <section className="section">
         <div className="container">
           <div className={styles.sectionHeader}>
-            <span className={styles.label}>{t.services_label}</span>
             <h2>{t.services_h2}</h2>
             <p>{t.services_text}</p>
           </div>
@@ -75,9 +70,17 @@ export default function Teenused() {
                   <span className={styles.label}>{s.label}</span>
                   <h3>{s.h3}</h3>
                   <p>{s.text}</p>
-                  <ul className={styles.serviceList}>
+                  <div className={styles.priceCardBody}>
+                  {priceCards[i].rows.map(([name, price], j) => (
+                    <div key={j} className={styles.priceRow}>
+                      <span>{name}</span>
+                      <span className={styles.price}>{price}</span>
+                    </div>
+                  ))}
+                </div>
+                  {/* <ul className={styles.serviceList}>
                     {s.items.map((item, j) => <li key={j}>{item}</li>)}
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             ))}

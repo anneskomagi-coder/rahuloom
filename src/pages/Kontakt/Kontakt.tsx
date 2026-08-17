@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import { useContent } from '../../context/ContentContext'
+import k from '../../content/kontakt.json'
 import PageHero from '../../components/PageHero/PageHero'
 import Button from '../../components/Button/Button'
 import styles from './Kontakt.module.css'
 
 export default function Kontakt() {
-  const c = useContent()
-  const k = c.kontakt
   const [submitted, setSubmitted] = useState(false)
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
