@@ -47,118 +47,123 @@ export default function Avaleht() {
         </div>
       </section>
 
-      <section className={styles.gallerySection}>
-        <div className={`container ${styles.galleryRow}`}>
-          {galleryPhotos.map((photo, i) => (
-            <div key={i} className={styles.pinnedPhoto} data-index={i}>
-              <span className={styles.tape} />
-              <img src={photo.src} alt={photo.alt} />
-              <p className={styles.caption}>{photo.caption}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <div className={styles.scrapbook}>
 
-      <section className={`section ${styles.intro ?? ''}`}>
-        <div className={`container ${styles.introGrid}`}>
-          <div className={styles.introText}>
-            <span className={styles.label}>{a.intro_label}</span>
-            {a.intro_h2 && <h2>{a.intro_h2}</h2>}
-            <p>{a.intro_text}</p>
-            <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
-          </div>
-          <div>
-            <img src={hobune} alt="Valge hobune" className="content-img intro-ph" />
-          </div>
-        </div>
-      </section>
-
-      <section className="section bg-soft">
-        <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.label}>{a.services_label}</span>
-            <h2>{a.services_h2}</h2>
-            <p>{a.services_text}</p>
-            <Button to="/teenused" variant="primary">{a.cards_btn}</Button>
-          </div>
-          <div className={styles.cards}>
-            {([
-              { h3: a.card1_h3, text: a.card1_text },
-              { h3: a.card2_h3, text: a.card2_text },
-              { h3: a.card3_h3, text: a.card3_text },
-              { h3: a.card4_h3, text: a.card4_text },
-            ] as const).map((card, i) => (
-              <Link key={i} to="/teenused" className={styles.card}>
-                <h3>{card.h3}</h3>
-                <p>{card.text}</p>
-                <span className={styles.linkArrow}>Loe rohkem &rarr;</span>
-              </Link>
+        <section className={styles.gallerySection}>
+          <div className={`container ${styles.galleryRow}`}>
+            {galleryPhotos.map((photo, i) => (
+              <div key={i} className={styles.pinnedPhoto} data-index={i}>
+                <span className={styles.tape} />
+                <img src={photo.src} alt={photo.alt} />
+                <p className={styles.caption}>{photo.caption}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className={`container ${styles.whySection}`}>
-          <div className={styles.whyMain}>
-            <div className={styles.sectionHeaderLeft}>
-              <span className={styles.label}>{a.why_label}</span>
-              <h2>{a.why_h2}</h2>
+        <section className={styles.pageSection}>
+          <div className={`container ${styles.introGrid}`}>
+            <div className={styles.introText}>
+              <span className={styles.label}>{a.intro_label}</span>
+              {a.intro_h2 && <h2>{a.intro_h2}</h2>}
+              <p>{a.intro_text}</p>
+              <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
             </div>
-            <div className={styles.whyGrid}>
-              {whyItems.map((item, i) => (
-                <div key={i} className={styles.whyItem}>
-                  <h3>{item.h3}</h3>
-                  <p>{item.text}</p>
+            <div className={styles.introPhotoWrap}>
+              <span className={styles.tape} />
+              <img src={hobune} alt="Valge hobune" className={styles.introPhoto} />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.pageSection}>
+          <div className="container">
+            <div className={styles.sectionHeader}>
+              <span className={styles.label}>{a.services_label}</span>
+              <h2>{a.services_h2}</h2>
+              <p>{a.services_text}</p>
+              <Button to="/teenused" variant="primary">{a.cards_btn}</Button>
+            </div>
+            <div className={styles.cards}>
+              {([
+                { h3: a.card1_h3, text: a.card1_text },
+                { h3: a.card2_h3, text: a.card2_text },
+                { h3: a.card3_h3, text: a.card3_text },
+                { h3: a.card4_h3, text: a.card4_text },
+              ] as const).map((card, i) => (
+                <Link key={i} to="/teenused" className={styles.card}>
+                  <h3>{card.h3}</h3>
+                  <p>{card.text}</p>
+                  <span className={styles.linkArrow}>Loe rohkem &rarr;</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.pageSection}>
+          <div className={`container ${styles.whySection}`}>
+            <div className={styles.whyMain}>
+              <div className={styles.sectionHeaderLeft}>
+                <span className={styles.label}>{a.why_label}</span>
+                <h2>{a.why_h2}</h2>
+              </div>
+              <div className={styles.whyGrid}>
+                {whyItems.map((item, i) => (
+                  <div key={i} className={styles.whyItem}>
+                    <h3>{item.h3}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={styles.miniGallery}>
+              {whyPhotos.map((photo, i) => (
+                <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
+                  <span className={styles.tape} />
+                  <img src={photo.src} alt={photo.alt} />
+                  <p className={styles.caption}>{photo.caption}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className={styles.miniGallery}>
-            {whyPhotos.map((photo, i) => (
-              <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
-                <span className={styles.tape} />
-                <img src={photo.src} alt={photo.alt} />
-                <p className={styles.caption}>{photo.caption}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section bg-soft">
-        <div className={`container ${styles.howSection}`}>
-          <div className={styles.miniGallery}>
-            {howPhotos.map((photo, i) => (
-              <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
-                <span className={styles.tape} />
-                <img src={photo.src} alt={photo.alt} />
-                <p className={styles.caption}>{photo.caption}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.howMain}>
-            <div className={styles.sectionHeaderLeft}>
-              <span className={styles.label}>{a.how_label}</span>
-              <h2>{a.how_h2}</h2>
-            </div>
-            <ol className={styles.howList}>
-              {howSteps.map((step, i) => (
-                <li key={i} className={styles.howStep}>
-                  <span className={styles.howNumber}>{i + 1}</span>
-                  <p>{step}</p>
-                </li>
+        <section className={styles.pageSection}>
+          <div className={`container ${styles.howSection}`}>
+            <div className={styles.miniGallery}>
+              {howPhotos.map((photo, i) => (
+                <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
+                  <span className={styles.tape} />
+                  <img src={photo.src} alt={photo.alt} />
+                  <p className={styles.caption}>{photo.caption}</p>
+                </div>
               ))}
-            </ol>
+            </div>
+            <div className={styles.howMain}>
+              <div className={styles.sectionHeaderLeft}>
+                <span className={styles.label}>{a.how_label}</span>
+                <h2>{a.how_h2}</h2>
+              </div>
+              <ol className={styles.howList}>
+                {howSteps.map((step, i) => (
+                  <li key={i} className={styles.howStep}>
+                    <span className={styles.howNumber}>{i + 1}</span>
+                    <p>{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className={styles.quoteSection}>
-        <div className="container">
-          <blockquote>{a.quote}</blockquote>
-        </div>
-      </section>
+        <section className={styles.quoteSection}>
+          <div className="container">
+            <blockquote>{a.quote}</blockquote>
+          </div>
+        </section>
+
+      </div>
 
       <CtaSection
         h2={a.cta_h2}
