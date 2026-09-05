@@ -50,6 +50,32 @@
   background: var(--sage);
 }
 
+.eduSubList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.eduSubItem {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--mid);
+}
+
+.eduSubItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--sage);
+  background: transparent;
+}
+
 .approachSection {
   max-width: 700px;
   margin: 0 auto;

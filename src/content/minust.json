@@ -4,19 +4,23 @@
   "about_label": "Minu lugu",
   "about_h2": "Tere, mina olen Ann",
   "about_p1": "Loomad on olnud minu elu osa lapsest saati.",
-  "about_p2": "Kõik sai alguse Muhu saarel karjatallis, kus abistasin lehmi ajamas juba enne kooliiga. 13-aastaselt leidsin hobused — ja need pole minu elust enam kunagi lahkunud. Alates 2001. aastast veetsin 12 aastat vabatahtlikuna Tartu lähedal Kobratu tallis, kus õppisin loomade käitumist tunnetama, vastutust võtma ja rahulikuks jääma ka kõige keerulisemates olukordades.",
+  "about_p2": "Kõik sai alguse Muhu karjatallis, kus käisin abis lehmi ajamas juba enne kooliiga. 13-aastaselt leidsin hobused — ja need pole minu elust enam kunagi lahkunud. Alates 2001. aastast veetsin 12 aastat vabatahtlikuna Tartu lähedal Kobratu tallis, kus õppisin loomade käitumist tunnetama, vastutust võtma ja rahulikuks jääma ka kõige keerulisemates olukordades.",
   "about_p3": "Hobustega koos on möödunud üle 25 aasta — tallitööst ja ratsutamisest kuni hipoteraapia abistamiseni. Just hipoteraapias nägin, kui suur mõju on hobuse liikumisel ja lähedusel inimese heaolule. See kogemus juhatas mind lõpuks sinna, kuhu ma tänaseks jõudnud olen: soovini anda hobustele tagasi kõik see, mida nad on mulle andnud.",
   "edu_label": "Haridus & Kogemus",
   "edu_h2": "Haridus ja kvalifikatsioon",
   "edu_items": [
-    "4. taseme hobuhooldaja kutse — Järvamaa Kutsehariduskeskus",
-    "Loomamassööri väljaõpe (hobused ja koerad), 468 h — Eesti Massaaži- ja Teraapiakool",
-    "Hobuse ja koera anatoomia, füsioloogia, patoloogia ja psühholoogia",
-    "Biomehaanika ja liikumisanalüüs",
-    "Palpatsioon ja seisundi hindamine",
-    "Ohutu käsitlus ja töövõtted",
-    "5. taseme loomamassööri kutse (kutseeksam sooritatud)",
-    "Pidev erialane enesetäiendamine — jälgin rahvusvahelisi hobuse kehatöö spetsialiste ja katsetan uusi teadmisi praktikas"
+    { "text": "4. taseme hobuhooldaja kutse — Järvamaa Kutsehariduskeskus" },
+    {
+      "text": "Loomamassööri väljaõpe (hobused ja koerad), 468 h — Eesti Massaaži- ja Teraapiakool",
+      "subitems": [
+        "Hobuse ja koera anatoomia, füsioloogia, patoloogia ja psühholoogia",
+        "Biomehaanika ja liikumisanalüüs",
+        "Palpatsioon ja seisundi hindamine",
+        "Ohutu käsitlus ja töövõtted"
+      ]
+    },
+    { "text": "5. taseme loomamassööri kutse (kutseeksam sooritatud)" },
+    { "text": "Pidev erialane enesetäiendamine — jälgin rahvusvahelisi hobuse kehatöö spetsialiste ja katsetan uusi teadmisi praktikas" }
   ],
   "approach_label": "Minu töö",
   "approach_h2": "Minu lähenemine",

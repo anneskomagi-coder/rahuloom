@@ -31,7 +31,16 @@ export default function Minust() {
           </div>
           <ul className={styles.eduList}>
             {m.edu_items.map((item, i) => (
-              <li key={i} className={styles.eduItem}>{item}</li>
+              <li key={i} className={styles.eduItem}>
+                {item.text}
+                {item.subitems && (
+                  <ul className={styles.eduSubList}>
+                    {item.subitems.map((sub, j) => (
+                      <li key={j} className={styles.eduSubItem}>{sub}</li>
+                    ))}
+                  </ul>
+                )}
+              </li>
             ))}
           </ul>
         </div>
