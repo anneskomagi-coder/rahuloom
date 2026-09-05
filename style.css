@@ -4,8 +4,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:      #f5f2ec;
-  --cream-dark: #ede8df;
+  --cream:      #f2e6d3;
+  --cream-dark: #e8d7bc;
   --sage:       #2a5240;
   --sage-dark:  #193626;
   --sage-light: #4e7a60;

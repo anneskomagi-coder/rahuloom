@@ -5,6 +5,22 @@ import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Avaleht.module.css'
 const hobune = '/hobune_vees.jpeg'
 
+const galleryPhotos = [
+  { src: '/hobune-masinaga.jpg', alt: 'Massaaž hobusega tallis', caption: 'tallis, hommikul' },
+  { src: '/hobuse-kalli.jpg', alt: 'Hobuse kallistus', caption: 'kallistus' },
+  { src: '/hobune_pikali.jpeg', alt: 'Hobune liivarannas', caption: 'rannas puhkamas' },
+]
+
+const whyPhotos = [
+  { src: '/hobu-kasi.jpg', alt: 'Käsi hobuse kaelal', caption: 'rahulik puudutus' },
+  { src: '/revitavet.jpeg', alt: 'RevitaVet infrapunatekk hobusel', caption: 'soe ja hubane' },
+]
+
+const howPhotos = [
+  { src: '/hobu-hambad.jpg', alt: 'Naerev hobune karjamaal', caption: 'naerusuine sõber' },
+  { src: '/hobuse-hambad.jpeg', alt: 'Hobune metsateel', caption: 'metsarajal' },
+]
+
 export default function Avaleht() {
 
   const whyItems = [
@@ -28,6 +44,18 @@ export default function Avaleht() {
             <Button to="/kontakt" variant="primary">{a.hero_btn_primary}</Button>
             <Button to="/teenused" variant="outline">{a.hero_btn_outline}</Button>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.gallerySection}>
+        <div className={`container ${styles.galleryRow}`}>
+          {galleryPhotos.map((photo, i) => (
+            <div key={i} className={styles.pinnedPhoto} data-index={i}>
+              <span className={styles.tape} />
+              <img src={photo.src} alt={photo.alt} />
+              <p className={styles.caption}>{photo.caption}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -60,27 +88,38 @@ export default function Avaleht() {
               { h3: a.card3_h3, text: a.card3_text },
               { h3: a.card4_h3, text: a.card4_text },
             ] as const).map((card, i) => (
-              <div key={i} className={styles.card}>
+              <Link key={i} to="/teenused" className={styles.card}>
                 <h3>{card.h3}</h3>
                 <p>{card.text}</p>
-                <Link to="/teenused" className={styles.linkArrow}>Loe rohkem &rarr;</Link>
-              </div>
+                <span className={styles.linkArrow}>Loe rohkem &rarr;</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.label}>{a.why_label}</span>
-            <h2>{a.why_h2}</h2>
+        <div className={`container ${styles.whySection}`}>
+          <div className={styles.whyMain}>
+            <div className={styles.sectionHeaderLeft}>
+              <span className={styles.label}>{a.why_label}</span>
+              <h2>{a.why_h2}</h2>
+            </div>
+            <div className={styles.whyGrid}>
+              {whyItems.map((item, i) => (
+                <div key={i} className={styles.whyItem}>
+                  <h3>{item.h3}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className={styles.whyGrid}>
-            {whyItems.map((item, i) => (
-              <div key={i} className={styles.whyItem}>
-                <h3>{item.h3}</h3>
-                <p>{item.text}</p>
+          <div className={styles.miniGallery}>
+            {whyPhotos.map((photo, i) => (
+              <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
+                <span className={styles.tape} />
+                <img src={photo.src} alt={photo.alt} />
+                <p className={styles.caption}>{photo.caption}</p>
               </div>
             ))}
           </div>
@@ -88,19 +127,30 @@ export default function Avaleht() {
       </section>
 
       <section className="section bg-soft">
-        <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.label}>{a.how_label}</span>
-            <h2>{a.how_h2}</h2>
-          </div>
-          <ol className={styles.howList}>
-            {howSteps.map((step, i) => (
-              <li key={i} className={styles.howStep}>
-                <span className={styles.howNumber}>{i + 1}</span>
-                <p>{step}</p>
-              </li>
+        <div className={`container ${styles.howSection}`}>
+          <div className={styles.miniGallery}>
+            {howPhotos.map((photo, i) => (
+              <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
+                <span className={styles.tape} />
+                <img src={photo.src} alt={photo.alt} />
+                <p className={styles.caption}>{photo.caption}</p>
+              </div>
             ))}
-          </ol>
+          </div>
+          <div className={styles.howMain}>
+            <div className={styles.sectionHeaderLeft}>
+              <span className={styles.label}>{a.how_label}</span>
+              <h2>{a.how_h2}</h2>
+            </div>
+            <ol className={styles.howList}>
+              {howSteps.map((step, i) => (
+                <li key={i} className={styles.howStep}>
+                  <span className={styles.howNumber}>{i + 1}</span>
+                  <p>{step}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
