@@ -1,5 +1,5 @@
 {
-  "_readme": "Siin saad muuta teenuste nimesid, kirjeldusi ja hindu. 'featured': true paneb selle rea juurde sildi 'Populaarne' - kasuta seda ainult ühe rea juures. Kui lisad uue rea, kopeeri { \"name\": \"...\", \"price\": \"...\" } ja lisa see 'rows' loetellu.",
+  "_readme": "Siin saad muuta teenuste nimesid, kirjeldusi, ja hindu. 'featured': true paneb selle rea juurde sildi 'Populaarne' - kasuta seda ainult ühe rea juures. Kui lisad uue rea, kopeeri { \"name\": \"...\", \"price\": \"...\" } ja lisa see 'rows' loetellu.",
 
   "services": [
     {
