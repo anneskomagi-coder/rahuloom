@@ -7,6 +7,16 @@ const hobune = '/hobune_vees.jpeg'
 
 export default function Avaleht() {
 
+  const whyItems = [
+    { h3: a.why1_h3, text: a.why1_text },
+    { h3: a.why2_h3, text: a.why2_text },
+    { h3: a.why3_h3, text: a.why3_text },
+    { h3: a.why4_h3, text: a.why4_text },
+    { h3: a.why5_h3, text: a.why5_text },
+  ]
+
+  const howSteps = [a.how1_text, a.how2_text, a.how3_text, a.how4_text, a.how5_text]
+
   return (
     <>
       <section className={styles.hero}>
@@ -25,7 +35,7 @@ export default function Avaleht() {
         <div className={`container ${styles.introGrid}`}>
           <div className={styles.introText}>
             <span className={styles.label}>{a.intro_label}</span>
-            <h2>{a.intro_h2}</h2>
+            {a.intro_h2 && <h2>{a.intro_h2}</h2>}
             <p>{a.intro_text}</p>
             <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
           </div>
@@ -48,6 +58,7 @@ export default function Avaleht() {
               { h3: a.card1_h3, text: a.card1_text },
               { h3: a.card2_h3, text: a.card2_text },
               { h3: a.card3_h3, text: a.card3_text },
+              { h3: a.card4_h3, text: a.card4_text },
             ] as const).map((card, i) => (
               <div key={i} className={styles.card}>
                 <h3>{card.h3}</h3>
@@ -56,6 +67,40 @@ export default function Avaleht() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <span className={styles.label}>{a.why_label}</span>
+            <h2>{a.why_h2}</h2>
+          </div>
+          <div className={styles.whyGrid}>
+            {whyItems.map((item, i) => (
+              <div key={i} className={styles.whyItem}>
+                <h3>{item.h3}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-soft">
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <span className={styles.label}>{a.how_label}</span>
+            <h2>{a.how_h2}</h2>
+          </div>
+          <ol className={styles.howList}>
+            {howSteps.map((step, i) => (
+              <li key={i} className={styles.howStep}>
+                <span className={styles.howNumber}>{i + 1}</span>
+                <p>{step}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

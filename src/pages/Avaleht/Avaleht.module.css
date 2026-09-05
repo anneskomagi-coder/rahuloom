@@ -96,13 +96,13 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .card {
-  background: var(--cream);
+  background: var(--white);
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
   border: 1px solid var(--border);
@@ -125,6 +125,58 @@
 }
 .linkArrow:hover { color: var(--brown); }
 
+/* Why Rahuloom */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.whyItem h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.whyItem p {
+  color: var(--mid);
+  font-size: 0.95rem;
+}
+
+/* How to book */
+.howList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.howStep {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.howNumber {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sage-dark);
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.howStep p {
+  padding-top: 0.4rem;
+  margin: 0;
+}
+
 /* Quote */
 .quoteSection {
   background: var(--sage-dark);
@@ -145,10 +197,13 @@
 
 @media (max-width: 900px) {
   .introGrid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .cards { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .whyGrid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
+  .cards { grid-template-columns: 1fr; }
+  .whyGrid { grid-template-columns: 1fr; }
   .heroContent { padding: 4rem 1rem; }
   .heroBtns { flex-direction: column; align-items: center; }
 }
