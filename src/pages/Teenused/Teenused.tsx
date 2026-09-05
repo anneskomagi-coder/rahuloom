@@ -1,4 +1,5 @@
 import t from '../../content/teenused.json'
+import h from '../../content/hinnad.json'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Teenused.module.css'
 const hobuneVees = '/hobune_vees.jpeg'
@@ -6,42 +7,19 @@ const hobuneLoust = '/hobune_pikali.jpeg'
 const revitavet = '/revitavet.jpeg'
 const hobuseKalli = '/hobuse-kalli.jpg'
 
+const serviceImages = [
+  { img: hobuneVees, alt: 'Massaaž. Hobune vees', reverse: false },
+  { img: hobuneLoust, alt: 'Püsikliendile. Hobuse kallistus', reverse: true },
+  { img: revitavet, alt: 'Revitavet. Infrapuna', reverse: false },
+  { img: hobuseKalli, alt: 'Koera massaaž', reverse: true },
+]
+
 export default function Teenused() {
 
-  const services = [
-    {
-      img: hobuneVees, alt: 'Massaaž. Hobune vees', reverse: false,
-      label: t.s1_label, h3: t.s1_h3, text: t.s1_text,
-      rows: [
-        [t.s1_r1_name, t.s1_r1_price, false],
-        [t.s1_r2_name, t.s1_r2_price, true],
-        [t.s1_r3_name, t.s1_r3_price, false],
-        [t.s1_r4_name, t.s1_r4_price, false],
-      ],
-    },
-    {
-      img: hobuneLoust, alt: 'Püsikliendile. Hobuse kallistus', reverse: true,
-      label: t.s2_label, h3: t.s2_h3, text: t.s2_text,
-      rows: [
-        [t.s2_r1_name, t.s2_r1_price, false],
-        [t.s2_r2_name, t.s2_r2_price, false],
-      ],
-    },
-    {
-      img: revitavet, alt: 'Revitavet. Infrapuna', reverse: false,
-      label: t.s3_label, h3: t.s3_h3, text: t.s3_text,
-      rows: [
-        [t.s3_r1_name, t.s3_r1_price, false],
-      ],
-    },
-    {
-      img: hobuseKalli, alt: 'Koera massaaž', reverse: true,
-      label: t.s4_label, h3: t.s4_h3, text: t.s4_text,
-      rows: [
-        [t.s4_r1_name, t.s4_r1_price, false],
-      ],
-    },
-  ]
+  const services = h.services.map((service, i) => ({
+    ...service,
+    ...serviceImages[i],
+  }))
 
   return (
     <>
@@ -59,15 +37,15 @@ export default function Teenused() {
                 </div>
                 <div className={styles.serviceBlockText}>
                   {s.label && <span className={styles.label}>{s.label}</span>}
-                  <h3>{s.h3}</h3>
+                  <h3>{s.title}</h3>
                   {s.text && <p>{s.text}</p>}
                   <div className={styles.priceCardBody}>
-                    {s.rows.map(([name, price, featured], j) => (
-                      <div key={j} className={`${styles.priceRow}${featured ? ` ${styles.priceRowFeatured}` : ''}`}>
-                        {featured && <span className={styles.badge}>Populaarne</span>}
+                    {s.rows.map((row, j) => (
+                      <div key={j} className={`${styles.priceRow}${row.featured ? ` ${styles.priceRowFeatured}` : ''}`}>
+                        {row.featured && <span className={styles.badge}>Populaarne</span>}
                         <div className={styles.priceRowInner}>
-                          <span>{name}</span>
-                          <span className={styles.price}>{price}</span>
+                          <span>{row.name}</span>
+                          <span className={styles.price}>{row.price}</span>
                         </div>
                       </div>
                     ))}
@@ -76,7 +54,7 @@ export default function Teenused() {
               </div>
             ))}
           </div>
-          <p className={styles.pricingNote}>{t.services_note}</p>
+          <p className={styles.pricingNote}>{h.services_note}</p>
         </div>
       </section>
 

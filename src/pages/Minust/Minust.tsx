@@ -13,13 +13,13 @@ export default function Minust() {
           <div>
             <img src={hobune} alt="Hobune pikali" className="content-img about-ph" />
           </div>
-          <div className={styles.aboutText}>
+          {/* <div className={styles.aboutText}>
             <span className={styles.label}>{m.about_label}</span>
             <h2>{m.about_h2}</h2>
             <p>{m.about_p1}</p>
             <p>{m.about_p2}</p>
             <p>{m.about_p3}</p>
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -1,0 +1,60 @@
+{
+  "_readme": "Siin saad muuta teenuste nimesid, kirjeldusi ja hindu. 'featured': true paneb selle rea juurde sildi 'Populaarne' - kasuta seda ainult ühe rea juures. Kui lisad uue rea, kopeeri { \"name\": \"...\", \"price\": \"...\" } ja lisa see 'rows' loetellu.",
+
+  "services": [
+    {
+      "label": "",
+      "title": "Hobuse massaaž",
+      "text": "",
+      "rows": [
+        {
+          "name": "Esmakohtumine + massaaž (1,5 h). Esimene kohtumine algab tutvumisest — nii hobuse kui omanikuga. Kaardistan hobuse seisundi, täidame koos anamneesilehe ja koostan massaažiplaani vastavalt tema vajadusele.",
+          "price": "65 €",
+          "featured": false
+        },
+        {
+          "name": "Klassikaline massaaž (1 h). Ennetav ja lõõgastav hooldus, mis toetab liikuvust ja lihaspikkust. Sobib igale hobusele, olenemata vanusest või tegevusalast.",
+          "price": "55 €",
+          "featured": true
+        },
+        {
+          "name": "Spordimassaaž (30 min). Treenivale või võistlevale hobusele — toetab töövõimet ning kiirendab taastumist enne või pärast pingutust.",
+          "price": "40 €",
+          "featured": false
+        },
+        {
+          "name": "Ühe piirkonna massaaž (30 min). Konkreetse lihaspiirkonna pinge sihipäraseks leevendamiseks.",
+          "price": "25 €",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "label": "püsikliendile",
+      "title": "Sooduspaketid",
+      "text": "Regulaarne hooldus annab kehale parima ja püsivama tulemuse.",
+      "rows": [
+        { "name": "5x hoolduspakett", "price": "250 €", "featured": false },
+        { "name": "10x hoolduspakett", "price": "480 €", "featured": false }
+      ]
+    },
+    {
+      "label": "UUS! maksimaalne lõõgastus",
+      "title": "Infrapunateki sessioon + massaaž",
+      "text": "Eestis esimesi kaasaskantavaid RevitaVet infrapunatekke kasutav teenus. Soojendab süvalihaseid, parandab vereringet ja suurendab massaaži mõju.",
+      "rows": [
+        { "name": "Infrapunateki sessioon + massaaž (70 min)", "price": "70 €", "featured": false }
+      ]
+    },
+    {
+      "label": "",
+      "title": "Koera massaaž",
+      "text": "Sobib nii pereloomale kui sportkoerale (agility, kuulekus, näitusekoerad) — leevendab lihaspingeid ja toetab taastumist.",
+      "rows": [
+        { "name": "Koera massaaž (45 min)", "price": "40 €", "featured": false }
+      ]
+    }
+  ],
+
+  "services_note": "Kõikide teenuste hinnale lisandub sõidutasu vastavalt asukohale. (0.35€/km)"
+}
