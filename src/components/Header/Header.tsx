@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import c from '../../content/shared.json'
 import styles from './Header.module.css'
-const logo = '/rahuloom-logo-2.webp'
+const logo = '/rahuloom-logo-white.webp'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
