@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import c from '../../content/shared.json'
 import styles from './Footer.module.css'
-const logo = '/loplik-logo-rahuloom.webp'
+const logo = '/rahuloom-logo-white.webp'
 
 export default function Footer() {
   return (
