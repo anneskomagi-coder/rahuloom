@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import k from '../../content/kontakt.json'
-import PageHero from '../../components/PageHero/PageHero'
 import Button from '../../components/Button/Button'
 import styles from './Kontakt.module.css'
 
@@ -31,12 +30,8 @@ export default function Kontakt() {
     }
   }
 
-  const hours = k.info_hours.split('\n')
-
   return (
     <>
-      <PageHero label={k.page_label} title={k.page_h1} />
-
       <section className="section">
         <div className={`container ${styles.grid}`}>
           <div className={styles.formWrap}>
@@ -107,25 +102,9 @@ export default function Kontakt() {
               </div>
             </div>
 
-            <div className={styles.infoBlock}>
-              <div className={styles.infoIcon}>✎</div>
-              <div>
-                <h4>{k.info_hours_label}</h4>
-                <p>{hours.map((line, i) => <span key={i}>{line}{i < hours.length - 1 && <br />}</span>)}</p>
-              </div>
-            </div>
-
             <div className={styles.socialLinks}>
               <h4>{k.info_social_label}</h4>
               <div className={styles.socialRow}>
-                <a href={k.info_instagram_url} className={styles.socialLink} aria-label="Instagram">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-                  </svg>
-                  Instagram
-                </a>
                 <a href={k.info_facebook_url} className={styles.socialLink} aria-label="Facebook">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />

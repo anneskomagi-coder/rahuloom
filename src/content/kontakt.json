@@ -1,6 +1,4 @@
 {
-  "page_label": "Räägime",
-  "page_h1": "Kontakt",
   "form_h2": "Saada sõnum",
   "form_text": "Täida vorm ja vastan sulle esimesel võimalusel, tavaliselt 24 tunni jooksul.",
   "form_success": "Aitäh! Sinu sõnum on saadetud. Vastan esimesel võimalusel.",
@@ -12,11 +10,8 @@
   "info_phone_label": "Telefon",
   "info_phone": "+372 500 1234",
   "info_location_label": "Asukoht",
-  "info_location": "Tallinn, Eesti",
+  "info_location": "Tartu, Eesti",
   "info_location_note": "Täpne aadress saadetakse pärast broneerimist.",
-  "info_hours_label": "Tööaeg",
-  "info_hours": "Esmaspäev – Reede: 9:00–19:00\nLaupäev: 10:00–15:00\nPühapäev: Suletud",
   "info_social_label": "Sotsiaalmeedia",
-  "info_instagram_url": "#",
-  "info_facebook_url": "#"
+  "info_facebook_url": "https://www.facebook.com/profile.php?id=100064654219887"
 }
