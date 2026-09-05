@@ -37,92 +37,43 @@
 .serviceBlockText h3 { font-size: 1.5rem; margin: 0.75rem 0 1rem; }
 .serviceBlockText p { margin-bottom: 1.25rem; }
 
-.serviceList {
-  list-style: none;
-  margin-top: 0.5rem;
-}
-.serviceList li {
-  padding: 0.4rem 0;
-  padding-left: 1.25rem;
-  position: relative;
-  color: var(--mid);
-  font-size: 0.95rem;
-}
-.serviceList li::before {
-  content: '–';
-  position: absolute;
-  left: 0;
-  color: var(--sage);
-}
-
 /* Pricing */
-.pricingGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.priceCard {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.priceCardFeatured {
-  border-color: var(--sage);
-  box-shadow: 0 0 0 2px var(--sage-light);
-}
-
-.priceCardHeader {
-  background: var(--cream);
-  padding: 1.5rem 2rem 1.25rem;
-  border-bottom: 1px solid var(--border);
-}
-.priceCardFeatured .priceCardHeader {
-  background: var(--sage-dark);
-}
-.priceCardFeatured .priceCardHeader h3 {
-  color: var(--white);
-}
-.priceCardHeader h3 { font-size: 1.15rem; margin: 0; }
-
-.badge {
-  display: inline-block;
-  background: var(--sage-light);
-  color: var(--sage-dark);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
-.priceCardFeatured .badge {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--white);
-}
-
-.priceCardBody { padding: 1.25rem 2rem 1.75rem; }
+.priceCardBody { padding: 1.25rem 0 0; }
 
 .priceRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   padding: 0.65rem 0;
   border-bottom: 1px solid var(--border);
-  gap: 1rem;
   font-size: 0.92rem;
 }
 .priceRow:last-child { border-bottom: none; }
-.priceRow span:first-child { color: var(--charcoal); }
+
+.priceRowInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.priceRowInner span:first-child { color: var(--charcoal); }
+
+.priceRowFeatured { padding-top: 0.9rem; }
 
 .price {
   font-weight: 700;
   color: var(--sage-dark);
   white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--sage-light);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
 }
 
 .pricingNote {
@@ -135,5 +86,4 @@
 @media (max-width: 900px) {
   .serviceBlock,
   .serviceBlockReverse { grid-template-columns: 1fr; gap: 2rem; direction: ltr; }
-  .pricingGrid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
