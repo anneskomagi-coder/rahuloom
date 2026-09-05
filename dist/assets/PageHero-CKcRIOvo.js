@@ -1,1 +1,0 @@
-import{j as e}from"./index-yYITPf0R.js";const r="_pageHero_1xt3l_1",n="_label_1xt3l_9",s={pageHero:r,label:n};function t({label:a,title:l}){return e.jsx("section",{className:s.pageHero,children:e.jsxs("div",{className:"container",children:[e.jsx("span",{className:s.label,children:a}),e.jsx("h1",{children:l})]})})}export{t as P};
