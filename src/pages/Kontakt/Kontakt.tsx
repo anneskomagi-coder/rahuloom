@@ -4,13 +4,31 @@ import PageHero from '../../components/PageHero/PageHero'
 import Button from '../../components/Button/Button'
 import styles from './Kontakt.module.css'
 
-export default function Kontakt() {
-  const [submitted, setSubmitted] = useState(false)
+const WEB3FORMS_ACCESS_KEY = 'd38d8cdf-d243-45cd-8b90-d98ae1145cc8'
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+export default function Kontakt() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
-    e.currentTarget.reset()
+    const form = e.currentTarget
+    setStatus('sending')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('sent')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const hours = k.info_hours.split('\n')
@@ -25,10 +43,14 @@ export default function Kontakt() {
             <h2>{k.form_h2}</h2>
             <p>{k.form_text}</p>
             <form className={styles.form} onSubmit={handleSubmit}>
+              <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+              <input type="hidden" name="subject" value="Uus sõnum Rahuloom kodulehelt" />
+              <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="nimi">Nimi *</label>
-                  <input type="text" id="nimi" name="nimi" placeholder="Sinu nimi" required />
+                  <input type="text" id="nimi" name="name" placeholder="Sinu nimi" required />
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="email">E-post *</label>
@@ -40,23 +62,17 @@ export default function Kontakt() {
                 <input type="tel" id="telefon" name="telefon" placeholder="+372 5xxx xxxx" />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="teema">Teema</label>
-                <select id="teema" name="teema">
-                  <option value="">Vali teema</option>
-                  <option value="massaaž">Massaaž</option>
-                  <option value="noustamine">Nõustamine</option>
-                  <option value="loogastus">Lõõgastus</option>
-                  <option value="kinkekaard">Kinkekaard</option>
-                  <option value="muu">Muu</option>
-                </select>
-              </div>
-              <div className={styles.formGroup}>
                 <label htmlFor="sonum">Sõnum *</label>
-                <textarea id="sonum" name="sonum" rows={5} placeholder="Kirjuta oma küsimusest või soovist..." required />
+                <textarea id="sonum" name="message" rows={5} placeholder="Kirjuta oma küsimusest või soovist..." required />
               </div>
-              <Button type="submit" variant="primary" full>{k.form_btn}</Button>
-              {submitted && (
+              <Button type="submit" variant="primary" full disabled={status === 'sending'}>
+                {status === 'sending' ? 'Saadan...' : k.form_btn}
+              </Button>
+              {status === 'sent' && (
                 <div className={styles.success}>{k.form_success}</div>
+              )}
+              {status === 'error' && (
+                <div className={styles.error}>{k.form_error}</div>
               )}
             </form>
           </div>
