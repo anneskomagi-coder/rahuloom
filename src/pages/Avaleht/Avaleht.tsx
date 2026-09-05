@@ -5,21 +5,8 @@ import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Avaleht.module.css'
 const hobune = '/hobune_vees.jpeg'
 
-const galleryPhotos = [
-  { src: '/hobune-masinaga.jpg', alt: 'Massaaž hobusega tallis', caption: 'tallis, hommikul' },
-  { src: '/hobuse-kalli.jpg', alt: 'Hobuse kallistus', caption: 'kallistus' },
-  { src: '/hobune_pikali.jpeg', alt: 'Hobune liivarannas', caption: 'rannas puhkamas' },
-]
-
-const whyPhotos = [
-  { src: '/hobu-kasi.jpg', alt: 'Käsi hobuse kaelal', caption: 'rahulik puudutus' },
-  { src: '/revitavet.jpeg', alt: 'RevitaVet infrapunatekk hobusel', caption: 'soe ja hubane' },
-]
-
-const howPhotos = [
-  { src: '/hobu-hambad.jpg', alt: 'Naerev hobune karjamaal', caption: 'naerusuine sõber' },
-  { src: '/hobuse-hambad.jpeg', alt: 'Hobune metsateel', caption: 'metsarajal' },
-]
+const whyPhoto = '/hobu-kasi.jpg'
+const howPhoto = '/hobuse-kalli.jpg'
 
 export default function Avaleht() {
 
@@ -47,123 +34,92 @@ export default function Avaleht() {
         </div>
       </section>
 
-      <div className={styles.scrapbook}>
+      <section className={styles.introSection}>
+        <div className={`container ${styles.introGrid}`}>
+          <div className={styles.introText}>
+            <span className={styles.label}>{a.intro_label}</span>
+            {a.intro_h2 && <h2>{a.intro_h2}</h2>}
+            <p>{a.intro_text}</p>
+            <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
+          </div>
+          <div className={styles.introPhotoFrame}>
+            <img src={hobune} alt="Ann hobusega vees" />
+          </div>
+        </div>
+      </section>
 
-        <section className={styles.gallerySection}>
-          <div className={`container ${styles.galleryRow}`}>
-            {galleryPhotos.map((photo, i) => (
-              <div key={i} className={styles.pinnedPhoto} data-index={i}>
-                <span className={styles.tape} />
-                <img src={photo.src} alt={photo.alt} />
-                <p className={styles.caption}>{photo.caption}</p>
-              </div>
+      <section className={styles.servicesSection}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <span className={styles.label}>{a.services_label}</span>
+            <h2>{a.services_h2}</h2>
+            <p>{a.services_text}</p>
+          </div>
+          <div className={styles.cards}>
+            {([
+              { h3: a.card1_h3, text: a.card1_text },
+              { h3: a.card2_h3, text: a.card2_text },
+              { h3: a.card3_h3, text: a.card3_text },
+              { h3: a.card4_h3, text: a.card4_text },
+            ] as const).map((card, i) => (
+              <Link key={i} to="/teenused" className={styles.card}>
+                <h3>{card.h3}</h3>
+                <p>{card.text}</p>
+                <span className={styles.linkArrow}>Loe rohkem &rarr;</span>
+              </Link>
             ))}
           </div>
-        </section>
-
-        <section className={styles.pageSection}>
-          <div className={`container ${styles.introGrid}`}>
-            <div className={styles.introText}>
-              <span className={styles.label}>{a.intro_label}</span>
-              {a.intro_h2 && <h2>{a.intro_h2}</h2>}
-              <p>{a.intro_text}</p>
-              <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
-            </div>
-            <div className={styles.introPhotoWrap}>
-              <span className={styles.tape} />
-              <img src={hobune} alt="Valge hobune" className={styles.introPhoto} />
-            </div>
+          <div className={styles.servicesCta}>
+            <Button to="/teenused" variant="primary">{a.cards_btn}</Button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className={styles.pageSection}>
-          <div className="container">
-            <div className={styles.sectionHeader}>
-              <span className={styles.label}>{a.services_label}</span>
-              <h2>{a.services_h2}</h2>
-              <p>{a.services_text}</p>
-              <Button to="/teenused" variant="primary">{a.cards_btn}</Button>
-            </div>
-            <div className={styles.cards}>
-              {([
-                { h3: a.card1_h3, text: a.card1_text },
-                { h3: a.card2_h3, text: a.card2_text },
-                { h3: a.card3_h3, text: a.card3_text },
-                { h3: a.card4_h3, text: a.card4_text },
-              ] as const).map((card, i) => (
-                <Link key={i} to="/teenused" className={styles.card}>
-                  <h3>{card.h3}</h3>
-                  <p>{card.text}</p>
-                  <span className={styles.linkArrow}>Loe rohkem &rarr;</span>
-                </Link>
-              ))}
-            </div>
+      <section className={styles.whySection}>
+        <div className={`container ${styles.splitGrid}`}>
+          <div className={styles.splitPhotoFrame}>
+            <img src={whyPhoto} alt="Rahulik puudutus hobusega" />
           </div>
-        </section>
-
-        <section className={styles.pageSection}>
-          <div className={`container ${styles.whySection}`}>
-            <div className={styles.whyMain}>
-              <div className={styles.sectionHeaderLeft}>
-                <span className={styles.label}>{a.why_label}</span>
-                <h2>{a.why_h2}</h2>
-              </div>
-              <div className={styles.whyGrid}>
-                {whyItems.map((item, i) => (
-                  <div key={i} className={styles.whyItem}>
-                    <h3>{item.h3}</h3>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className={styles.miniGallery}>
-              {whyPhotos.map((photo, i) => (
-                <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
-                  <span className={styles.tape} />
-                  <img src={photo.src} alt={photo.alt} />
-                  <p className={styles.caption}>{photo.caption}</p>
+          <div className={styles.splitText}>
+            <span className={styles.label}>{a.why_label}</span>
+            <h2>{a.why_h2}</h2>
+            <div className={styles.whyGrid}>
+              {whyItems.map((item, i) => (
+                <div key={i} className={styles.whyItem}>
+                  <h3>{item.h3}</h3>
+                  <p>{item.text}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className={styles.pageSection}>
-          <div className={`container ${styles.howSection}`}>
-            <div className={styles.miniGallery}>
-              {howPhotos.map((photo, i) => (
-                <div key={i} className={`${styles.pinnedPhoto} ${styles.pinnedPhotoSmall}`}>
-                  <span className={styles.tape} />
-                  <img src={photo.src} alt={photo.alt} />
-                  <p className={styles.caption}>{photo.caption}</p>
-                </div>
+      <section className={styles.howSection}>
+        <div className={`container ${styles.splitGrid} ${styles.splitGridReverse}`}>
+          <div className={styles.splitText}>
+            <span className={styles.label}>{a.how_label}</span>
+            <h2>{a.how_h2}</h2>
+            <ol className={styles.howList}>
+              {howSteps.map((step, i) => (
+                <li key={i} className={styles.howStep}>
+                  <span className={styles.howNumber}>{i + 1}</span>
+                  <p>{step}</p>
+                </li>
               ))}
-            </div>
-            <div className={styles.howMain}>
-              <div className={styles.sectionHeaderLeft}>
-                <span className={styles.label}>{a.how_label}</span>
-                <h2>{a.how_h2}</h2>
-              </div>
-              <ol className={styles.howList}>
-                {howSteps.map((step, i) => (
-                  <li key={i} className={styles.howStep}>
-                    <span className={styles.howNumber}>{i + 1}</span>
-                    <p>{step}</p>
-                  </li>
-                ))}
-              </ol>
-            </div>
+            </ol>
           </div>
-        </section>
-
-        <section className={styles.quoteSection}>
-          <div className="container">
-            <blockquote>{a.quote}</blockquote>
+          <div className={styles.splitPhotoFrame}>
+            <img src={howPhoto} alt="Hobuse kallistus" />
           </div>
-        </section>
+        </div>
+      </section>
 
-      </div>
+      <section className={styles.quoteSection}>
+        <div className="container">
+          <blockquote>{a.quote}</blockquote>
+        </div>
+      </section>
 
       <CtaSection
         h2={a.cta_h2}
