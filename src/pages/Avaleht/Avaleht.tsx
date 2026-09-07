@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import a from '../../content/avaleht.json'
 import Button from '../../components/Button/Button'
-import CtaSection from '../../components/CtaSection/CtaSection'
 import styles from './Avaleht.module.css'
 const hobune = '/hobune_vees.jpeg'
 
@@ -39,7 +38,7 @@ export default function Avaleht() {
           <div className={styles.introText}>
             <span className={styles.label}>{a.intro_label}</span>
             {a.intro_h2 && <h2>{a.intro_h2}</h2>}
-            <p>{a.intro_text}</p>
+            <p>{a.intro_text2}</p>
             <Button to="/minust" variant="secondary">{a.intro_btn}</Button>
           </div>
           <div className={styles.introPhotoFrame}>
@@ -53,7 +52,6 @@ export default function Avaleht() {
           <div className={styles.sectionHeader}>
             <span className={styles.label}>{a.services_label}</span>
             <h2>{a.services_h2}</h2>
-            <p>{a.services_text}</p>
           </div>
           <div className={styles.cards}>
             {([
@@ -82,7 +80,6 @@ export default function Avaleht() {
           </div>
           <div className={styles.splitText}>
             <span className={styles.label}>{a.why_label}</span>
-            <h2>{a.why_h2}</h2>
             <div className={styles.whyGrid}>
               {whyItems.map((item, i) => (
                 <div key={i} className={styles.whyItem}>
@@ -114,18 +111,6 @@ export default function Avaleht() {
           </div>
         </div>
       </section>
-
-      <section className={styles.quoteSection}>
-        <div className="container">
-          <blockquote>{a.quote}</blockquote>
-        </div>
-      </section>
-
-      <CtaSection
-        h2={a.cta_h2}
-        text={a.cta_text}
-        buttons={[{ label: a.cta_btn, to: '/kontakt' }]}
-      />
     </>
   )
 }

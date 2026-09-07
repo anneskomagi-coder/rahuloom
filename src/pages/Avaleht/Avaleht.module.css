@@ -244,24 +244,6 @@
   margin: 0;
 }
 
-/* ===== Quote ===== */
-.quoteSection {
-  background: linear-gradient(135deg, var(--sage-dark) 0%, #0f2419 100%);
-  padding: 6rem 1.5rem;
-  text-align: center;
-}
-
-.quoteSection blockquote {
-  font-family: var(--font);
-  font-style: italic;
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--white);
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.55;
-  opacity: 0.96;
-}
-
 @media (max-width: 900px) {
   .introGrid { grid-template-columns: 1fr; gap: 2.5rem; }
   .introPhotoFrame img { height: 340px; }
