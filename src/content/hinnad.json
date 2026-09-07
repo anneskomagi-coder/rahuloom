@@ -32,7 +32,7 @@
     {
       "label": "püsikliendile",
       "title": "Sooduspaketid",
-      "text": "Regulaarne hooldus annab kehale parima ja püsivama tulemuse.",
+      "text": "Regulaarne hooldus annab parima ja püsivama tulemuse.",
       "rows": [
         { "name": "5x hoolduspakett", "price": "250 €", "featured": false },
         { "name": "10x hoolduspakett", "price": "480 €", "featured": false }
@@ -41,7 +41,15 @@
     {
       "label": "UUS! maksimaalne lõõgastus",
       "title": "Infrapunateki sessioon + massaaž",
-      "text": "Eestis esimesi kaasaskantavaid RevitaVet infrapunatekke kasutav teenus. Soojendab süvalihaseid, parandab vereringet ja suurendab massaaži mõju.",
+      "details": [
+        "RevitaVet Infrared Blanket ehk Infrapunatekk katab hobuse peaaegu tervenisti. Tekil on üle 1600 väikese LED-valgusallika, mis jaotuvad ühtlaselt üle kogu hobuse selja ja suuremate lihasgruppide. Teki mõõtudeks 150 × 120 cm. Sessioon kestab 15 minutit.",
+        "BackSaver ehk otsetõlkes SeljaPäästja sobib hästi näiteks hobuse selja-, kaela- või laudjapiirkonna lihaste hoolduseks. 140 LED-i punane valgus jaotub valitud piirkonnale ühtlaselt. Valguspaneeli mõõtudeks on 48 × 24 cm. Sessioon kestab ühele piirkonnale 10-15 min.",
+        "Neck Pad ehk Kaelapadi kasutab kahte erinevat valguse lainepikkust – nähtavat punast valgust ja lähinfrapunavalgust. Punane valgus toetab eelkõige pindmisi kudesid, lähinfrapunavalgus jõuab sügavamale lihastesse ja sidekudedesse. Sessioon kestab 20 min.",
+        "RevitaVet valgusravi toetab keha loomulikke taastumisprotsesse ning sobib kasutamiseks nii pärast füüsilist koormust kui ka lihas- ja tugiliikumissüsteemi erinevate probleemide korral.",
+        "Valgusravi võib olla abiks lihasventuste ja -rebendite, kõõluste ülekoormuse, operatsioonijärgse taastumise ning liigeste liikuvuse säilitamise toetamisel. Samuti aitab see aktiveerida vere- ja lümfiringet, leevendada kroonilisi lihas- ja liigesepingeid ning toetada eakate hobuste ja koerte liikumisvõimet.",
+        "Punane valgus mõjutab eelkõige nahka, karvafolliikuleid, pindmisi lihaseid, kõõluseid ja fastsiat.",
+        "Lähinfrapunavalgus mõjutab sügavamaid lihaseid, kõõluseid, sidemeid ja liigeseid."
+      ],
       "rows": [
         { "name": "Infrapunateki sessioon + massaaž (70 min)", "price": "70 €", "featured": false }
       ]
