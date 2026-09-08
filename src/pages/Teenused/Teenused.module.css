@@ -41,9 +41,11 @@
 }
 
 .serviceBlockText h3 { font-size: 1.5rem; margin: 0.75rem 0 1rem; }
-.serviceBlockText p { margin-bottom: 1.25rem; }
+.serviceBlockText p { font-size: 0.92rem; color: var(--charcoal); margin-bottom: 1.25rem; }
 
 .serviceDetail {
+  font-size: 0.92rem;
+  color: var(--charcoal);
   margin-bottom: 1.25rem;
 }
 
