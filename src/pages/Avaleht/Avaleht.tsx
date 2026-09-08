@@ -96,7 +96,7 @@ export default function Avaleht() {
         <div className={`container ${styles.splitGrid} ${styles.splitGridReverse}`}>
           <div className={styles.splitText}>
             <span className={styles.label}>{a.how_label}</span>
-            <h2>{a.how_h2}</h2>
+            
             <ol className={styles.howList}>
               {howSteps.map((step, i) => (
                 <li key={i} className={styles.howStep}>
