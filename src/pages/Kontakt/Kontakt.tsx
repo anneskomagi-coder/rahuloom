@@ -91,16 +91,6 @@ export default function Kontakt() {
               </div>
             </div>
 
-            <div className={styles.infoBlock}>
-              <div className={styles.infoIcon}>●</div>
-              <div>
-                <h4>{k.info_location_label}</h4>
-                <p>
-                  {k.info_location}<br />
-                  <small>{k.info_location_note}</small>
-                </p>
-              </div>
-            </div>
 
             <div className={styles.socialLinks}>
               <h4>{k.info_social_label}</h4>

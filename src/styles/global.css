@@ -15,21 +15,26 @@
   --border:     #ddd6ca;
   --white:      #ffffff;
 
-  --font: 'Georgia', Helvetica, serif;
+  --font: 'Lora', Georgia, serif;
+  --font-body: 'Lato', Helvetica, Arial, sans-serif;
 
   --max-w: 1160px;
   --radius: 12px;
   --transition: 0.25s ease;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Base for all rem sizing. Bumped from 16px to enlarge body copy site-wide;
+     headings below are re-anchored so they stay visually the same. */
+  font-size: 17px;
+}
 
 body {
-  font-family: var(--font);
+  font-family: var(--font-body);
   color: var(--charcoal);
   background: var(--white);
   line-height: 1.7;
-  font-size: 16px;
 }
 
 img { max-width: 100%; display: block; }
@@ -44,10 +49,11 @@ h1, h2, h3, h4 {
   line-height: 1.25;
   color: var(--charcoal);
 }
-h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 600; }
-h3 { font-size: 1.25rem; font-weight: 600; }
-h4 { font-size: 1rem; font-weight: 700; font-family: var(--font); }
+/* Heading sizes are pinned so the larger root font-size only affects body copy. */
+h1 { font-size: clamp(2.07rem, 5vw, 3.76rem); font-weight: 600; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.26rem); font-weight: 600; }
+h3 { font-size: 1.18rem; font-weight: 600; }
+h4 { font-size: 0.94rem; font-weight: 700; font-family: var(--font); }
 
 p { color: var(--mid); margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
