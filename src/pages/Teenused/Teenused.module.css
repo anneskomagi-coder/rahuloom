@@ -92,7 +92,7 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 0.85rem;
-  color: var(--mid);
+  color: var(--charcoal);
 }
 
 @media (max-width: 900px) {
