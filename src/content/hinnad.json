@@ -9,22 +9,22 @@
       "rows": [
         {
           "name": "Esmakohtumine + massaaž (1,5 h). Esimene kohtumine algab tutvumisest — nii hobuse kui omanikuga. Kaardistan hobuse seisundi, täidame koos anamneesilehe ja koostan massaažiplaani vastavalt tema vajadusele.",
-          "price": "70 €",
+          "price": "65 €",
           "featured": false
         },
         {
           "name": "Klassikaline massaaž (1 h). Ennetav ja lõõgastav hooldus, mis toetab liikuvust ja lihaspikkust. Sobib igale hobusele, olenemata vanusest või tegevusalast.",
-          "price": "60 €",
+          "price": "55 €",
           "featured": true
         },
         {
           "name": "Spordimassaaž (30 min). Treenivale või võistlevale hobusele — toetab töövõimet ning kiirendab taastumist enne või pärast pingutust.",
-          "price": "45 €",
+          "price": "40 €",
           "featured": false
         },
         {
           "name": "Ühe piirkonna massaaž (30 min). Konkreetse lihaspiirkonna pinge sihipäraseks leevendamiseks.",
-          "price": "30 €",
+          "price": "25 €",
           "featured": false
         }
       ]
@@ -44,14 +44,14 @@
       "details": [
         "RevitaVet Infrared Blanket ehk Infrapunatekk katab hobuse peaaegu tervenisti. Tekil on üle 1600 väikese LED-valgusallika, mis jaotuvad ühtlaselt üle kogu hobuse selja ja suuremate lihasgruppide. Teki mõõtudeks 150 × 120 cm. Sessioon kestab 15 minutit.",
         "BackSaver ehk otsetõlkes SeljaPäästja sobib hästi näiteks hobuse selja-, kaela- või laudjapiirkonna lihaste hoolduseks. 140 LED-i punane valgus jaotub valitud piirkonnale ühtlaselt. Valguspaneeli mõõtudeks on 48 × 24 cm. Sessioon kestab ühele piirkonnale 10-15 min.",
-        "Neck Pad ehk Kaelapadi kasutab kahte erinevat valguse lainepikkust – nähtavat punast valgust ja lähinfrapunavalgust. Punane valgus toetab eelkõige pindmisi kudesid, lähinfrapunavalgus jõuab sügavamale lihastesse ja sidekudedesse. Sessioon kestab 20 min.",
+        "Neck Pad ehk Kaelapadi kasutab kahte erinevat valguse lainepikkust – nähtavat punast valgust ja lähiinfrapunavalgust. Punane valgus toetab eelkõige pindmisi kudesid, lähiinfrapunavalgus jõuab sügavamale lihastesse ja sidekudedesse. Sessioon kestab 20 min.",
         "RevitaVet valgusravi toetab keha loomulikke taastumisprotsesse ning sobib kasutamiseks nii pärast füüsilist koormust kui ka lihas- ja tugiliikumissüsteemi erinevate probleemide korral.",
         "Valgusravi võib olla abiks lihasventuste ja -rebendite, kõõluste ülekoormuse, operatsioonijärgse taastumise ning liigeste liikuvuse säilitamise toetamisel. Samuti aitab see aktiveerida vere- ja lümfiringet, leevendada kroonilisi lihas- ja liigesepingeid ning toetada eakate hobuste ja koerte liikumisvõimet.",
         "Punane valgus mõjutab eelkõige nahka, karvafolliikuleid, pindmisi lihaseid, kõõluseid ja fastsiat.",
-        "Lähinfrapunavalgus mõjutab sügavamaid lihaseid, kõõluseid, sidemeid ja liigeseid."
+        "Lähiinfrapunavalgus mõjutab sügavamaid lihaseid, kõõluseid, sidemeid ja liigeseid."
       ],
       "rows": [
-        { "name": "Infrapunateki sessioon + massaaž (70 min)", "price": "75 €", "featured": false }
+        { "name": "Infrapunateki sessioon + massaaž (70 min)", "price": "70 €", "featured": false }
       ]
     },
     {
@@ -59,7 +59,7 @@
       "title": "Koera massaaž",
       "text": "Sobib nii pereloomale kui sportkoerale (agility, kuulekus, näitusekoerad) — leevendab lihaspingeid ja toetab taastumist.",
       "rows": [
-        { "name": "Koera massaaž (45 min)", "price": "45 €", "featured": false }
+        { "name": "Koera massaaž (45 min)", "price": "40 €", "featured": false }
       ]
     }
   ],
