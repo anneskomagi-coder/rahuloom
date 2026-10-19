@@ -8,6 +8,7 @@ const links = [
   { to: '/', label: c.nav.avaleht, end: true },
   { to: '/minust', label: c.nav.minust },
   { to: '/teenused', label: c.nav.teenused },
+  { to: '/infrapuna', label: c.nav.infrapuna },
   { to: '/kontakt', label: c.nav.kontakt },
 ]
 
