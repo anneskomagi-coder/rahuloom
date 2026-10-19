@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import t from '../../content/teenused.json'
 import h from '../../content/hinnad.json'
 import CtaSection from '../../components/CtaSection/CtaSection'
@@ -24,7 +25,11 @@ export default function Teenused() {
       <section className="section">
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2>{t.services_h2}</h2>
+            <h2>
+              {t.services_h2_before}
+              <Link to="/infrapuna" className={styles.headerLink}>{t.services_h2_link}</Link>
+              {t.services_h2_after}
+            </h2>
             <p>{t.services_text}</p>
           </div>
           <div className={styles.serviceBlocks}>

@@ -16,6 +16,12 @@
 }
 .sectionHeader p { font-size: 1.05rem; }
 .sectionHeader h2 { margin-bottom: 1rem; }
+.headerLink {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.headerLink:hover { color: var(--sage-dark); }
 
 .serviceBlocks {
   display: flex;
