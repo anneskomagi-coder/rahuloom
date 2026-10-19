@@ -16,16 +16,6 @@
           "name": "Klassikaline massaaž (1 h). Ennetav ja lõõgastav hooldus, mis toetab liikuvust ja lihaspikkust. Sobib igale hobusele, olenemata vanusest või tegevusalast.",
           "price": "55 €",
           "featured": true
-        },
-        {
-          "name": "Spordimassaaž (30 min). Treenivale või võistlevale hobusele — toetab töövõimet ning kiirendab taastumist enne või pärast pingutust.",
-          "price": "40 €",
-          "featured": false
-        },
-        {
-          "name": "Ühe piirkonna massaaž (30 min). Konkreetse lihaspiirkonna pinge sihipäraseks leevendamiseks.",
-          "price": "25 €",
-          "featured": false
         }
       ]
     },
@@ -34,8 +24,8 @@
       "title": "Sooduspaketid",
       "text": "Regulaarne hooldus annab parima ja püsivama tulemuse.",
       "rows": [
-        { "name": "5x hoolduspakett", "price": "255 €", "featured": false },
-        { "name": "10x hoolduspakett", "price": "485 €", "featured": false }
+        { "name": "3x seeniorhobusele", "price": "100 €", "featured": false },
+        { "name": "5x hoolduspakett", "price": "255 €", "featured": false }
       ]
     },
     {
