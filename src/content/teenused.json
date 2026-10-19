@@ -2,8 +2,9 @@
   "page_label": "Mida pakun",
   "page_h1": "Teenused & Hinnad",
   "services_label": "Teenused",
-  "services_h2": "Vali sobiv teenus",
+  "services_h2": "Iga sessiooni lõpus saab hobune infrapunatekiga lõõgastuda!",
   "services_text": "Kõik sessioonid toimuvad rahulikul ja turvalisel moel ja on kohandatud vastavalt looma vajadustele.",
+  "services_highlight": "Iga sessiooni lõpus saab hobune infrapunateki sees lõõgastuda",
   "cta_h2": "Pole kindel, mis sobib?",
   "cta_text": "Kirjuta mulle – leiame koos parima lahenduse.",
   "cta_btn": "Broneeri aeg"
