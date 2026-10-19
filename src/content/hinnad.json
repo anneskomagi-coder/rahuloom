@@ -24,7 +24,7 @@
       "title": "Sooduspaketid",
       "text": "Regulaarne hooldus annab parima ja püsivama tulemuse.",
       "rows": [
-        { "name": "3x seeniorhobusele", "price": "100 €", "featured": false },
+        { "name": "3x seeniorhobusele. Kohtumised iga 2 nädala tagant. Kolme korraga saab hobune üleni ära muditud. ", "price": "100 €", "featured": false },
         { "name": "5x hoolduspakett", "price": "255 €", "featured": false }
       ]
     },
