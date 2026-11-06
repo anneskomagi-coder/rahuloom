@@ -6,6 +6,19 @@
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script>
+      // Temporary favicon preview: ?favicon=emblem or ?favicon=heart
+      (function () {
+        var choice = new URLSearchParams(location.search).get('favicon')
+        if (choice !== 'emblem' && choice !== 'heart') return
+        document.querySelectorAll('link[rel="icon"]').forEach(function (l) { l.remove() })
+        var link = document.createElement('link')
+        link.rel = 'icon'
+        link.type = 'image/svg+xml'
+        link.href = '/favicon-' + choice + '.svg?v=' + Date.now()
+        document.head.appendChild(link)
+      })()
+    </script>
     <title>Rahuloom – Hobuse- ja koeramassaaž</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
